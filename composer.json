@@ -1,0 +1,17 @@
+{
+    "name": "micui/join",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mgilangjanuar",
+            "email": "mgilangjanuar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ristek/sso": "*",
+        "slim/slim": "~2.0",
+        "kreait/firebase-php": "^3.0"
+    }
+}
