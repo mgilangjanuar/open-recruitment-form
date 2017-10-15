@@ -1,7 +1,7 @@
 {
-    "name": "micui/join",
+    "name": "open-recruitment-form",
     "type": "project",
-    "license": "MIT",
+    "license": "GNU GPL v3",
     "authors": [
         {
             "name": "mgilangjanuar",
