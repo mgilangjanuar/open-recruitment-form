@@ -6,7 +6,7 @@
         </p>
         <br />
         <p>
-            <a href="/logout" class="btn btn-default">Logout</a>
+            <a href="logout" class="btn btn-default">Logout</a>
         </p>
     </div>
 </div>
