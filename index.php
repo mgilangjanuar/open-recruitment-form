@@ -70,7 +70,7 @@ $app->group('/results', function () use ($app, $database)
     $app->post('/', function () use ($app)
     {
         $_SESSION['password'] = $app->request->post('password');
-        $app->redirect('/results');
+        $app->redirect('results');
     });
 
     $app->get('/', function () use ($app, $database, $isValidate)
@@ -125,19 +125,19 @@ $app->group('/results', function () use ($app, $database)
                     'idea' => $app->request->post('idea'),
                     'created_at' => date('d M Y H:i'),
                 ]);
-            $app->redirect('/results/view/' . $id);
+            $app->redirect('../../results/view/' . $id);
         });
 
         $app->get('/delete/:id', function ($id) use ($app, $database)
         {
             $database->getReference('users/' . $id)->set([]);
-            $app->redirect('/results');
+            $app->redirect('../../results');
         });
 
         $app->get('/logout', function () use ($app)
         {
             session_destroy();
-            $app->redirect('/results');
+            $app->redirect('../../results');
         });
     }
 });
