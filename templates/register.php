@@ -43,6 +43,7 @@
             </div>
 
             <p class="text-right">
+                <a id="cancel" href="logout" class="btn btn-danger">Cancel</a>
                 <button type="submit" class="btn btn-default">Submit</button>
             </p>
         </form>
