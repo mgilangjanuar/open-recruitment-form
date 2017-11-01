@@ -38,7 +38,7 @@
             <div class="form-group">
                 <label>Audience level<span class="text-danger">*</span></label>
                 <div class="radio">
-                    <label><input type="radio" name="audience" value="all" required>All</label>
+                    <label><input type="radio" name="audience" value="all" <?= $user['audience'] == 'all' ? 'checked' : '' ?>>All</label>
                 </div>
                 <div class="radio">
                     <label><input type="radio" name="audience" value="beginner" <?= $user['audience'] == 'beginner' ? 'checked' : '' ?>>Beginner</label>
