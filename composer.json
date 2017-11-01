@@ -10,7 +10,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "ristek/sso": "*",
         "slim/slim": "~2.0",
         "kreait/firebase-php": "^3.0"
     }

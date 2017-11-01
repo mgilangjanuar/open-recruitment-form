@@ -14,26 +14,6 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <td>NPM</td>
-                        <td><?= $id ?></td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td><?= $user['username'] ?? isset($user['username']) ?></td>
-                    </tr>
-                    <tr>
-                        <td>Faculty</td>
-                        <td><?= $user['faculty'] ?? isset($user['faculty']) ?></td>
-                    </tr>
-                    <tr>
-                        <td>Study Program</td>
-                        <td><?= $user['study_program'] ?? isset($user['study_program']) ?></td>
-                    </tr>
-                    <tr>
-                        <td>Educational Program</td>
-                        <td><?= $user['educational_program'] ?? isset($user['educational_program']) ?></td>
-                    </tr>
-                    <tr>
                         <td>Email</td>
                         <td><?= $user['email'] ?? isset($user['email']) ?></td>
                     </tr>
@@ -46,20 +26,16 @@
                         <td><?= $user['line'] ?? isset($user['line']) ?></td>
                     </tr>
                     <tr>
-                        <td>Expectation</td>
-                        <td><?= $user['expectation'] ?? isset($user['expectation']) ?></td>
+                        <td>Benefit</td>
+                        <td><?= $user['benefit'] ?? isset($user['benefit']) ?></td>
                     </tr>
                     <tr>
-                        <td>Motivation</td>
-                        <td><?= $user['motivation'] ?? isset($user['motivation']) ?></td>
+                        <td>Topic</td>
+                        <td><?= $user['topic'] ?? isset($user['topic']) ?></td>
                     </tr>
                     <tr>
-                        <td>Skillset</td>
-                        <td><?= $user['skillset'] ?? isset($user['skillset']) ?></td>
-                    </tr>
-                    <tr>
-                        <td>Idea</td>
-                        <td><?= $user['idea'] ?? isset($user['idea']) ?></td>
+                        <td>Audience level</td>
+                        <td><?= $user['audience'] ?? isset($user['audience']) ?></td>
                     </tr>
                     <tr>
                         <td>Submitted at</td>

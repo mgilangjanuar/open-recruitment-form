@@ -12,9 +12,7 @@
 </head>
 <body>
 
-    <div class="img-logo">
-        <img src="public/src/images/logo-reverse.png" alt="">
-    </div>
+    <div class="img-logo"></div>
     
     <div class="container-fluid">
         <?php require_once __DIR__ . '/' . $layout . '.php' ?>

@@ -6,7 +6,6 @@ session_start();
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Slim\Slim;
-use SSO\SSO;
 
 $app = new Slim();
 
@@ -18,52 +17,35 @@ $database = (new Factory)
 
 $app->get('/', function () use ($app)
 {
-    SSO::authenticate();
-    $user = SSO::getUser();
-
     $app->render('template.php', [
         'layout' => 'register',
-        'user' => $user
     ]);
 });
 
 $app->post('/', function () use ($app, $database)
 {
-    SSO::authenticate();
-    $user = SSO::getUser();
-
-    $database->getReference('users/' . $user->npm)
-        ->set([
-            'username' => $user->username,
-            'name' => $user->name,
-            'faculty' => $user->faculty,
-            'study_program' => $user->study_program,
-            'educational_program' => $user->educational_program,
+    $database->getReference('csuidev/users')
+        ->push([
+            'name' => $app->request->post('name'),
             'email' => $app->request->post('email'),
             'phone' => $app->request->post('phone'),
             'line' => $app->request->post('line'),
-            'expectation' => $app->request->post('expectation'),
-            'motivation' => $app->request->post('motivation'),
-            'skillset' => $app->request->post('skillset'),
-            'idea' => $app->request->post('idea'),
+            'benefit' => $app->request->post('benefit'),
+            'topic' => $app->request->post('topic'),
+            'audience' => $app->request->post('audience'),
             'created_at' => date('d M Y H:i'),
         ]);
     
     $app->render('template.php', [
         'layout' => 'success',
-        'user' => $user
+        'name' => $app->request->post('name')
     ]);
-});
-
-$app->get('/logout', function ()
-{
-    SSO::logout('https://www.micuniversitasindonesia.org/registration');
 });
 
 $app->group('/results', function () use ($app, $database)
 {
     if (!isset($_SESSION['password_hash'])) {
-        $_SESSION['password_hash'] = $database->getReference('site/password')->getValue();
+        $_SESSION['password_hash'] = $database->getReference('csuidev/site/password')->getValue();
     }
     $isValidate = isset($_SESSION['password']) && password_verify($_SESSION['password'], $_SESSION['password_hash']);
 
@@ -78,7 +60,7 @@ $app->group('/results', function () use ($app, $database)
         if ($isValidate) {
             $app->render('results/template.php', [
                 'layout' => 'data',
-                'data' => $database->getReference('users')->getValue(),
+                'data' => $database->getReference('csuidev/users')->getValue(),
             ]);
         } else {
             $app->render('results/template.php', [
@@ -94,7 +76,7 @@ $app->group('/results', function () use ($app, $database)
             $app->render('results/template.php', [
                 'layout' => 'view',
                 'id' => $id,
-                'user' => $database->getReference('users/' . $id)->getValue()
+                'user' => $database->getReference('csuidev/users/' . $id)->getValue()
             ]);
         });
 
@@ -103,26 +85,21 @@ $app->group('/results', function () use ($app, $database)
             $app->render('results/template.php', [
                 'layout' => 'update',
                 'id' => $id,
-                'user' => $database->getReference('users/' . $id)->getValue()
+                'user' => $database->getReference('csuidev/users/' . $id)->getValue()
             ]);
         });
 
         $app->post('/update/:id', function ($id) use ($app, $database)
         {
-            $database->getReference('users/' . $id)
+            $database->getReference('csuidev/users/' . $id)
                 ->set([
-                    'username' => $app->request->post('username'),
                     'name' => $app->request->post('name'),
-                    'faculty' => $app->request->post('faculty'),
-                    'study_program' => $app->request->post('study_program'),
-                    'educational_program' => $app->request->post('educational_program'),
                     'email' => $app->request->post('email'),
                     'phone' => $app->request->post('phone'),
                     'line' => $app->request->post('line'),
-                    'expectation' => $app->request->post('expectation'),
-                    'motivation' => $app->request->post('motivation'),
-                    'skillset' => $app->request->post('skillset'),
-                    'idea' => $app->request->post('idea'),
+                    'benefit' => $app->request->post('benefit'),
+                    'topic' => $app->request->post('topic'),
+                    'audience' => $app->request->post('audience'),
                     'created_at' => date('d M Y H:i'),
                 ]);
             $app->redirect('../../results/view/' . $id);
@@ -130,7 +107,7 @@ $app->group('/results', function () use ($app, $database)
 
         $app->get('/delete/:id', function ($id) use ($app, $database)
         {
-            $database->getReference('users/' . $id)->set([]);
+            $database->getReference('csuidev/users/' . $id)->set([]);
             $app->redirect('../../results');
         });
 

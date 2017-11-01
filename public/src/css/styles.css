@@ -22,6 +22,10 @@ li, a, p {
     font-family: 'SegoeUI';
 }
 
+strong {
+    font-family: 'SegoeUIBold';
+}
+
 section {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -208,7 +212,7 @@ section.header .col-sm-6 {
 .img-logo {
     width: 100%;
     background: #969696;
-    padding: 20px 15px;
+    padding: 10px 15px;
 }
 
 .img-logo img {

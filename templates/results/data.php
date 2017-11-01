@@ -14,8 +14,8 @@
                         <tr>
                             <th><strong>Date</strong></th>
                             <th><strong>Name</strong></th>
-                            <th><strong>NPM</strong></th>
-                            <th><strong>Study Program</strong></th>
+                            <th><strong>Email</strong></th>
+                            <th><strong>Topic</strong></th>
                             <th><strong>Actions</strong></th>
                         </tr>
                     </thead>
@@ -24,8 +24,8 @@
                             <tr>
                                 <td><?= $value['created_at'] ?></td>
                                 <td><?= $value['name'] ?></td>                        
-                                <td><?= $key ?></td>
-                                <td><?= $value['study_program'] ?></td>
+                                <td><?= $value['email'] ?></td>
+                                <td><?= $value['topic'] ?></td>
                                 <td>
                                     <a class="btn btn-xs btn-default" href="results/view/<?= $key ?>">View</a>
                                     <a class="btn btn-xs btn-warning" href="results/update/<?= $key ?>">Update</a>

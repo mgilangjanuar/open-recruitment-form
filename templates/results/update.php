@@ -11,26 +11,6 @@
             </div>
 
             <div class="form-group">
-                <label>Username<span class="text-danger">*</span></label>
-                <input class="form-control" name="username" type="text" value="<?= $user['username'] ?? isset($user['username']) ?>" required>
-            </div>
-
-            <div class="form-group">
-                <label>Faculty<span class="text-danger">*</span></label>
-                <input class="form-control" name="faculty" type="text" value="<?= $user['faculty'] ?? isset($user['faculty']) ?>" required>
-            </div>
-
-            <div class="form-group">
-                <label>Study Program<span class="text-danger">*</span></label>
-                <input class="form-control" name="study_program" type="text" value="<?= $user['study_program'] ?? isset($user['study_program']) ?>" required>
-            </div>
-
-            <div class="form-group">
-                <label>Educational Program<span class="text-danger">*</span></label>
-                <input class="form-control" name="educational_program" type="text" value="<?= $user['educational_program'] ?? isset($user['educational_program']) ?>" required>
-            </div>
-
-            <div class="form-group">
                 <label>Email address<span class="text-danger">*</span></label>
                 <input class="form-control" name="email" type="email" value="<?= $user['email'] ?? isset($user['email']) ?>" required>
             </div>
@@ -46,23 +26,26 @@
             </div>
 
             <div class="form-group">
-                <label>Expectation<span class="text-danger">*</span></label>
-                <textarea class="form-control" name="expectation" required><?= $user['expectation'] ?? isset($user['expectation']) ?></textarea>
+                <label>Benefit</label>
+                <textarea class="form-control" name="benefit"><?= $user['benefit'] ?? isset($user['benefit']) ?></textarea>
             </div>
 
             <div class="form-group">
-                <label>Motivation<span class="text-danger">*</span></label>
-                <textarea class="form-control" name="motivation" required><?= $user['motivation'] ?? isset($user['email']) ?></textarea>
+                <label>Theme or topic<span class="text-danger">*</span></label>
+                <textarea class="form-control" name="topic" required><?= $user['topic'] ?? isset($user['topic']) ?></textarea>
             </div>
 
             <div class="form-group">
-                <label>Skillset</label>
-                <textarea class="form-control" name="skillset"><?= $user['skillset'] ?? isset($user['skillset']) ?></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Your idea</label>
-                <textarea class="form-control" name="idea"><?= $user['idea'] ?? isset($user['idea']) ?></textarea>
+                <label>Audience level<span class="text-danger">*</span></label>
+                <div class="radio">
+                    <label><input type="radio" name="audience" value="beginner" <?= $user['audience'] == 'beginner' ? 'checked' : '' ?>>Beginner</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="audience" value="intermediate" <?= $user['audience'] == 'intermediate' ? 'checked' : '' ?>>Intermediate</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="audience" value="pro" <?= $user['audience'] == 'pro' ? 'checked' : '' ?>>Pro</label>
+                </div>
             </div>
 
             <p class="text-right">
