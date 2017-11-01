@@ -65,49 +65,50 @@
 
         <form method="post" class="form-forizontal">
 
-            <div class="form-group">
-                <label>Name<span class="text-danger">*</span></label>
-                <input class="form-control" name="name" type="text" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Email address<span class="text-danger">*</span></label>
-                <input class="form-control" name="email" type="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Phone number<span class="text-danger">*</span></label>
-                <input class="form-control" name="phone" type="text" required>
-            </div>
-
-            <div class="form-group">
-                <label>ID Line</label>
-                <input class="form-control" name="line" type="text">
-            </div>
-
-            <div class="form-group">
-                <label>Topic<span class="text-danger">*</span></label>
-                <input class="form-control" name="topic" type="text" required>
-            </div>
-
-            <div class="form-group">
-                <label>Synopsis<span class="text-danger">*</span></label>
-                <textarea class="form-control" name="synopsis" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Audience level<span class="text-danger">*</span></label>
-                <div class="radio">
-                    <label><input type="radio" name="audience" value="all" required>All</label>
+            <div class="well">
+                <legend>Personal Info</legend>
+                <div class="form-group">
+                    <label>Name<span class="text-danger">*</span></label>
+                    <input class="form-control" name="name" type="text" required>
                 </div>
-                <div class="radio">
-                    <label><input type="radio" name="audience" value="beginner" required>Beginner</label>
+                
+                <div class="form-group">
+                    <label>Email address<span class="text-danger">*</span></label>
+                    <input class="form-control" name="email" type="email" required>
                 </div>
-                <div class="radio">
-                    <label><input type="radio" name="audience" value="intermediate" required>Intermediate</label>
+                
+                <div class="form-group">
+                    <label>Phone number / ID Line<span class="text-danger">*</span></label>
+                    <input class="form-control" name="phone" type="text" required>
                 </div>
-                <div class="radio">
-                    <label><input type="radio" name="audience" value="pro" required>Pro</label>
+            </div>
+
+            <div class="well">
+                <legend>Talk Content</legend>
+                <div class="form-group">
+                    <label>Topic<span class="text-danger">*</span></label>
+                    <input class="form-control" name="topic" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Synopsis<span class="text-danger">*</span></label>
+                    <textarea class="form-control" name="synopsis" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Audience level<span class="text-danger">*</span></label>
+                    <div class="radio">
+                        <label><input type="radio" name="audience" value="all" required>All</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="audience" value="beginner" required>Beginner</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="audience" value="intermediate" required>Intermediate</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="audience" value="pro" required>Pro</label>
+                    </div>
                 </div>
             </div>
 

@@ -18,12 +18,8 @@
                         <td><?= $user['email'] ?? isset($user['email']) ?></td>
                     </tr>
                     <tr>
-                        <td>Phone</td>
+                        <td>Phone / ID Line</td>
                         <td><?= $user['phone'] ?? isset($user['phone']) ?></td>
-                    </tr>
-                    <tr>
-                        <td>Line</td>
-                        <td><?= $user['line'] ?? isset($user['line']) ?></td>
                     </tr>
                     <tr>
                         <td>Topic</td>

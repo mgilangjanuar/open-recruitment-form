@@ -16,13 +16,8 @@
             </div>
             
             <div class="form-group">
-                <label>Phone number<span class="text-danger">*</span></label>
+                <label>Phone number / ID Line<span class="text-danger">*</span></label>
                 <input class="form-control" name="phone" type="text" value="<?= $user['phone'] ?? isset($user['phone']) ?>" required>
-            </div>
-
-            <div class="form-group">
-                <label>ID Line</label>
-                <input class="form-control" name="line" value="<?= $user['line'] ?? isset($user['line']) ?>" type="text">
             </div>
 
             <div class="form-group">
