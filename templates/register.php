@@ -86,17 +86,20 @@
             </div>
 
             <div class="form-group">
-                <label>Benefit</label>
-                <textarea class="form-control" name="benefit"></textarea>
+                <label>Topic<span class="text-danger">*</span></label>
+                <input class="form-control" name="topic" type="text" required>
             </div>
 
             <div class="form-group">
-                <label>Theme or topic<span class="text-danger">*</span></label>
-                <textarea class="form-control" name="topic" required></textarea>
+                <label>Synopsis<span class="text-danger">*</span></label>
+                <textarea class="form-control" name="synopsis" required></textarea>
             </div>
 
             <div class="form-group">
                 <label>Audience level<span class="text-danger">*</span></label>
+                <div class="radio">
+                    <label><input type="radio" name="audience" value="all" required>All</label>
+                </div>
                 <div class="radio">
                     <label><input type="radio" name="audience" value="beginner" required>Beginner</label>
                 </div>

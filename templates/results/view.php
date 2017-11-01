@@ -26,12 +26,12 @@
                         <td><?= $user['line'] ?? isset($user['line']) ?></td>
                     </tr>
                     <tr>
-                        <td>Benefit</td>
-                        <td><?= $user['benefit'] ?? isset($user['benefit']) ?></td>
-                    </tr>
-                    <tr>
                         <td>Topic</td>
                         <td><?= $user['topic'] ?? isset($user['topic']) ?></td>
+                    </tr>
+                    <tr>
+                        <td>Synopsis</td>
+                        <td><?= $user['synopsis'] ?? isset($user['synopsis']) ?></td>
                     </tr>
                     <tr>
                         <td>Audience level</td>

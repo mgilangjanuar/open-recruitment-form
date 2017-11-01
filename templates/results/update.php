@@ -26,17 +26,20 @@
             </div>
 
             <div class="form-group">
-                <label>Benefit</label>
-                <textarea class="form-control" name="benefit"><?= $user['benefit'] ?? isset($user['benefit']) ?></textarea>
+                <label>Topic<span class="text-danger">*</span></label>
+                <input class="form-control" name="topic" value="<?= $user['topic'] ?? isset($user['topic']) ?>" type="text">
             </div>
 
             <div class="form-group">
-                <label>Theme or topic<span class="text-danger">*</span></label>
-                <textarea class="form-control" name="topic" required><?= $user['topic'] ?? isset($user['topic']) ?></textarea>
+                <label>Synopsis<span class="text-danger">*</span></label>
+                <textarea class="form-control" name="synopsis" required><?= $user['synopsis'] ?? isset($user['synopsis']) ?></textarea>
             </div>
 
             <div class="form-group">
                 <label>Audience level<span class="text-danger">*</span></label>
+                <div class="radio">
+                    <label><input type="radio" name="audience" value="all" required>All</label>
+                </div>
                 <div class="radio">
                     <label><input type="radio" name="audience" value="beginner" <?= $user['audience'] == 'beginner' ? 'checked' : '' ?>>Beginner</label>
                 </div>

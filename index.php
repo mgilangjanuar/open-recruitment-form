@@ -30,8 +30,8 @@ $app->post('/', function () use ($app, $database)
             'email' => $app->request->post('email'),
             'phone' => $app->request->post('phone'),
             'line' => $app->request->post('line'),
-            'benefit' => $app->request->post('benefit'),
             'topic' => $app->request->post('topic'),
+            'synopsis' => $app->request->post('synopsis'),
             'audience' => $app->request->post('audience'),
             'created_at' => date('d M Y H:i'),
         ]);
@@ -97,8 +97,8 @@ $app->group('/results', function () use ($app, $database)
                     'email' => $app->request->post('email'),
                     'phone' => $app->request->post('phone'),
                     'line' => $app->request->post('line'),
-                    'benefit' => $app->request->post('benefit'),
                     'topic' => $app->request->post('topic'),
+                    'synopsis' => $app->request->post('synopsis'),
                     'audience' => $app->request->post('audience'),
                     'created_at' => date('d M Y H:i'),
                 ]);
