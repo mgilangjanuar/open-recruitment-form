@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/public/libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/src/css/fonts.css">
     <link rel="stylesheet" href="/public/src/css/styles.css">
-    <title><?= isset($title) ? $title : ucfirst($layout) ?> | Microsoft Innovation Center Universitas Indonesia</title>
+    <title><?= isset($title) ? $title : ucfirst($layout) ?> | CSUI Developer Community</title>
 </head>
 <body>
 

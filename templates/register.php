@@ -65,7 +65,7 @@
 
         <form method="post" class="form-forizontal">
 
-            <div class="well">
+            <div class="panel">
                 <legend>Personal Info</legend>
                 <div class="form-group">
                     <label>Name<span class="text-danger">*</span></label>
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="well">
+            <div class="panel">
                 <legend>Talk Content</legend>
                 <div class="form-group">
                     <label>Topic<span class="text-danger">*</span></label>
